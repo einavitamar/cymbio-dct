@@ -1,0 +1,970 @@
+You are an e-commerce product taxonomy expert.
+I will now send a product taxonomy.
+The taxonomy is based on Department, Category, Type and subtype.
+
+This is the taxonomy:
+
+Apparel
+Apparel,Dresses
+Apparel,Dresses,Casual Dresses
+Apparel,Dresses,Casual Dresses,Boho dresses
+Apparel,Dresses,Casual Dresses,Cut-out dresses
+Apparel,Dresses,Casual Dresses,Draped dresses
+Apparel,Dresses,Casual Dresses,Drop-waist dresses
+Apparel,Dresses,Casual Dresses,Layered dresses
+Apparel,Dresses,Casual Dresses,Oversized dresses
+Apparel,Dresses,Casual Dresses,Peasant dresses
+Apparel,Dresses,Casual Dresses,Ruffled dresses
+Apparel,Dresses,Casual Dresses,Shift dresses
+Apparel,Dresses,Casual Dresses,Shirt dresses
+Apparel,Dresses,Casual Dresses,Slip dresses
+Apparel,Dresses,Casual Dresses,Smock dresses
+Apparel,Dresses,Casual Dresses,Sundresses
+Apparel,Dresses,Casual Dresses,Sweater dresses
+Apparel,Dresses,Casual Dresses,T-shirt dresses
+Apparel,Dresses,Casual Dresses,Tiered dresses
+Apparel,Dresses,Casual Dresses,Tunic dresses
+Apparel,Dresses,Casual Dresses,Coverups
+Apparel,Dresses,Cocktail Dresses
+Apparel,Dresses,Cocktail Dresses,Cut-out dresses
+Apparel,Dresses,Cocktail Dresses,Draped dresses
+Apparel,Dresses,Cocktail Dresses,Embellished dresses
+Apparel,Dresses,Cocktail Dresses,Lace dresses
+Apparel,Dresses,Cocktail Dresses,Layered dresses
+Apparel,Dresses,Cocktail Dresses,Ruffled dresses
+Apparel,Dresses,Cocktail Dresses,Sequined dresses
+Apparel,Dresses,Cocktail Dresses,Slip dresses
+Apparel,Dresses,Cocktail Dresses,Tiered dresses
+Apparel,Dresses,Gowns
+Apparel,Dresses,Gowns,Baptismal gowns
+Apparel,Dresses,Gowns,Bridal gowns
+Apparel,Dresses,Gowns,Bridesmaid dressses
+Apparel,Dresses,Gowns,Christening gowns
+Apparel,Dresses,Gowns,Communion gowns
+Apparel,Dresses,Gowns,Confirmation gowns
+Apparel,Dresses,Gowns,Costume gowns
+Apparel,Dresses,Gowns,Cotillion gowns
+Apparel,Dresses,Gowns,Debutante gowns
+Apparel,Dresses,Gowns,Evening gowns
+Apparel,Dresses,Gowns,Gala gowns
+Apparel,Dresses,Gowns,Pageant gowns
+Apparel,Dresses,Gowns,Prom gowns
+Apparel,Dresses,Gowns,Quinceañera gowns
+Apparel,Dresses,Gowns,Red carpet gowns
+Apparel,Jackets and Coats
+Apparel,Jackets and Coats,Blazers
+Apparel,Jackets and Coats,Blazers,Boyfriend blazers
+Apparel,Jackets and Coats,Blazers,Buttonless blazers
+Apparel,Jackets and Coats,Blazers,Cape blazers
+Apparel,Jackets and Coats,Blazers,Cropped blazers
+Apparel,Jackets and Coats,Blazers,Double-breasted blazers
+Apparel,Jackets and Coats,Blazers,Embroidered blazers
+Apparel,Jackets and Coats,Blazers,Fitted blazers
+Apparel,Jackets and Coats,Blazers,Kimono-style blazers
+Apparel,Jackets and Coats,Blazers,Longline blazers
+Apparel,Jackets and Coats,Blazers,Military-inspired blazers
+Apparel,Jackets and Coats,Blazers,Notch lapel blazers
+Apparel,Jackets and Coats,Blazers,Oversized blazers
+Apparel,Jackets and Coats,Blazers,Peak lapel blazers
+Apparel,Jackets and Coats,Blazers,Peplum blazers
+Apparel,Jackets and Coats,Blazers,Relaxed-fit blazers
+Apparel,Jackets and Coats,Blazers,Ruffled blazers
+Apparel,Jackets and Coats,Blazers,Single-breasted blazers
+Apparel,Jackets and Coats,Blazers,Tailored blazers
+Apparel,Jackets and Coats,Blazers,Tuxedo blazers
+Apparel,Jackets and Coats,Blazers,Wrap blazers
+Apparel,Jackets and Coats,Blazers,Tweed blazers
+Apparel,Jackets and Coats,Capes
+Apparel,Jackets and Coats,Capes,Cape coats
+Apparel,Jackets and Coats,Capes,Capelets
+Apparel,Jackets and Coats,Capes,Capotes
+Apparel,Jackets and Coats,Capes,Cloaks
+Apparel,Jackets and Coats,Capes,Cowl capes
+Apparel,Jackets and Coats,Capes,Hooded capes
+Apparel,Jackets and Coats,Capes,Inverness capes
+Apparel,Jackets and Coats,Capes,Mantles
+Apparel,Jackets and Coats,Capes,Medieval capes
+Apparel,Jackets and Coats,Capes,Military capes
+Apparel,Jackets and Coats,Capes,Opera capes
+Apparel,Jackets and Coats,Capes,Ponchos
+Apparel,Jackets and Coats,Capes,Renaissance capes
+Apparel,Jackets and Coats,Capes,Riding capes
+Apparel,Jackets and Coats,Capes,Superhero capes
+Apparel,Jackets and Coats,Capes,Vampire capes
+Apparel,Jackets and Coats,Capes,Victorian capes
+Apparel,Jackets and Coats,Capes,Wizard capes
+Apparel,Jackets and Coats,Faux Fur Jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Aviator jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Belted jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Bolero jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Cape jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Collared jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Cropped jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Lined jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Longline jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Moto jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Oversized Jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Reversible jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Shearling jackets
+Apparel,Jackets and Coats,Faux Fur Jackets,Trimmed jackets
+Apparel,Jackets and Coats,Fleece Jackets
+Apparel,Jackets and Coats,Fleece Jackets,Fleece anoraks
+Apparel,Jackets and Coats,Fleece Jackets,Fleece cardigans
+Apparel,Jackets and Coats,Fleece Jackets,Fleece pullovers
+Apparel,Jackets and Coats,Fleece Jackets,Fleece-lined anoraks
+Apparel,Jackets and Coats,Fleece Jackets,Fleece-lined blazers
+Apparel,Jackets and Coats,Fleece Jackets,Fleece-lined bomber jackets
+Apparel,Jackets and Coats,Fleece Jackets,Fleece-lined cardigans
+Apparel,Jackets and Coats,Fleece Jackets,Fleece-lined hoodies
+Apparel,Jackets and Coats,Fleece Jackets,Fleece-lined jackets
+Apparel,Jackets and Coats,Fleece Jackets,Fleece-lined parkas
+Apparel,Jackets and Coats,Fleece Jackets,Fleece-lined windbreakers
+Apparel,Jackets and Coats,Fleece Jackets,Full-zip fleece jackets
+Apparel,Jackets and Coats,Fleece Jackets,Half-zip fleece jackets
+Apparel,Jackets and Coats,Fleece Jackets,Quarter-zip fleece jackets
+Apparel,Jackets and Coats,Fur Coats
+Apparel,Jackets and Coats,Fur Coats,Fur aviator coats
+Apparel,Jackets and Coats,Fur Coats,Fur belted coats
+Apparel,Jackets and Coats,Fur Coats,Fur bolero coats
+Apparel,Jackets and Coats,Fur Coats,Fur cape coats
+Apparel,Jackets and Coats,Fur Coats,Fur collar coats
+Apparel,Jackets and Coats,Fur Coats,Fur cropped coats
+Apparel,Jackets and Coats,Fur Coats,Fur hooded coats
+Apparel,Jackets and Coats,Fur Coats,Fur lined coats
+Apparel,Jackets and Coats,Fur Coats,Fur longline coats
+Apparel,Jackets and Coats,Fur Coats,Fur moto coats
+Apparel,Jackets and Coats,Fur Coats,Fur oversized coats
+Apparel,Jackets and Coats,Fur Coats,Fur shaggy coats
+Apparel,Jackets and Coats,Fur Coats,Fur shearling coats
+Apparel,Jackets and Coats,Fur Coats,Fur trench coats
+Apparel,Jackets and Coats,Fur Coats,Fur trimmed coats
+Apparel,Jackets and Coats,Jean Jackets
+Apparel,Jackets and Coats,Jean Jackets,Acid wash denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Bleached denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Classic denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Cropped denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Distressed denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Embellished denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Fringed denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Moto-style denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Oversized denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Patchwork denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Sherpa-lined denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Vintage denim jackets
+Apparel,Jackets and Coats,Jean Jackets,Western-style denim jackets
+Apparel,Jackets and Coats,Professional Jackets
+Apparel,Jackets and Coats,Professional Jackets,Scrub Jackets
+Apparel,Jackets and Coats,Professional Jackets,Lab Coats
+Apparel,Jackets and Coats,Leather Jackets
+Apparel,Jackets and Coats,Leather Jackets,Biker jackets
+Apparel,Jackets and Coats,Leather Jackets,Bomber jackets
+Apparel,Jackets and Coats,Leather Jackets,Racer jackets
+Apparel,Jackets and Coats,Leather Jackets,Flight jackets
+Apparel,Jackets and Coats,Leather Jackets,Field jackets
+Apparel,Jackets and Coats,Leather Jackets,Aviator jackets
+Apparel,Jackets and Coats,Leather Jackets,Fitted jackets
+Apparel,Jackets and Coats,Leather Jackets,Moto jackets
+Apparel,Jackets and Coats,Leather Jackets,Western jackets
+Apparel,Jackets and Coats,Parkas
+Apparel,Jackets and Coats,Parkas,Anorak parkas
+Apparel,Jackets and Coats,Parkas,Arctic parkas
+Apparel,Jackets and Coats,Parkas,Convertible parkas
+Apparel,Jackets and Coats,Parkas,Down parkas
+Apparel,Jackets and Coats,Parkas,Expedition parkas
+Apparel,Jackets and Coats,Parkas,Field parkas
+Apparel,Jackets and Coats,Parkas,Fishtail parkas
+Apparel,Jackets and Coats,Parkas,Fur-trimmed parkas
+Apparel,Jackets and Coats,Parkas,Insulated parkas
+Apparel,Jackets and Coats,Parkas,Military parkas
+Apparel,Jackets and Coats,Parkas,Rain parkas
+Apparel,Jackets and Coats,Parkas,Technical parkas
+Apparel,Jackets and Coats,Parkas,Urban parkas
+Apparel,Jackets and Coats,Parkas,Utility parkas
+Apparel,Jackets and Coats,Parkas,Vintage parkas
+Apparel,Jackets and Coats,Parkas,Windbreaker parkas
+Apparel,Jackets and Coats,Peacoats
+Apparel,Jackets and Coats,Peacoats,Belted peacoats
+Apparel,Jackets and Coats,Peacoats,Cape-style peacoats
+Apparel,Jackets and Coats,Peacoats,Classic peacoats
+Apparel,Jackets and Coats,Peacoats,Cropped peacoats
+Apparel,Jackets and Coats,Peacoats,Double-breasted peacoats
+Apparel,Jackets and Coats,Peacoats,Embellished peacoats
+Apparel,Jackets and Coats,Peacoats,Fitted peacoats
+Apparel,Jackets and Coats,Peacoats,Military peacoats
+Apparel,Jackets and Coats,Peacoats,Naval peacoats
+Apparel,Jackets and Coats,Peacoats,Officer's peacoats
+Apparel,Jackets and Coats,Peacoats,Oversized peacoats
+Apparel,Jackets and Coats,Peacoats,Vintage peacoats
+Apparel,Jackets and Coats,Puffer Jackets
+Apparel,Jackets and Coats,Puffer Jackets,Belted puffer jackets
+Apparel,Jackets and Coats,Puffer Jackets,Cropped puffer jackets
+Apparel,Jackets and Coats,Puffer Jackets,Down-filled puffer jackets
+Apparel,Jackets and Coats,Puffer Jackets,Longline puffer jackets
+Apparel,Jackets and Coats,Puffer Jackets,Oversized puffer jackets
+Apparel,Jackets and Coats,Puffer Jackets,Packable puffer jackets
+Apparel,Jackets and Coats,Puffer Jackets,Quilted puffer jackets
+Apparel,Jackets and Coats,Puffer Jackets,Reversible puffer jackets
+Apparel,Jackets and Coats,Puffer Jackets,Synthetic-filled puffer jackets
+Apparel,Jackets and Coats,Quilted Jackets
+Apparel,Jackets and Coats,Quilted Jackets,Quilted anoraks
+Apparel,Jackets and Coats,Quilted Jackets,Quilted aviator jackets
+Apparel,Jackets and Coats,Quilted Jackets,Quilted barn jackets
+Apparel,Jackets and Coats,Quilted Jackets,Quilted chore jackets
+Apparel,Jackets and Coats,Quilted Jackets,Quilted cropped jackets
+Apparel,Jackets and Coats,Quilted Jackets,Quilted down jackets
+Apparel,Jackets and Coats,Quilted Jackets,Quilted field jackets
+Apparel,Jackets and Coats,Quilted Jackets,Quilted hunting jackets
+Apparel,Jackets and Coats,Quilted Jackets,Quilted military jackets
+Apparel,Jackets and Coats,Quilted Jackets,Quilted motorcycle jackets
+Apparel,Jackets and Coats,Quilted Jackets,Quilted overshirts
+Apparel,Jackets and Coats,Quilted Jackets,Quilted ski jackets
+Apparel,Jackets and Coats,Quilted Jackets,Quilted utility jackets
+Apparel,Jackets and Coats,Raincoats
+Apparel,Jackets and Coats,Raincoats,Anoraks
+Apparel,Jackets and Coats,Raincoats,Cagoule raincoats
+Apparel,Jackets and Coats,Raincoats,Cape-style raincoats
+Apparel,Jackets and Coats,Raincoats,Coachman raincoats
+Apparel,Jackets and Coats,Raincoats,Fishing raincoats
+Apparel,Jackets and Coats,Raincoats,Macintosh raincoats
+Apparel,Jackets and Coats,Raincoats,Packable raincoats
+Apparel,Jackets and Coats,Raincoats,Ponchos
+Apparel,Jackets and Coats,Raincoats,Rain capes
+Apparel,Jackets and Coats,Raincoats,Shell raincoats
+Apparel,Jackets and Coats,Raincoats,Slicker raincoats
+Apparel,Jackets and Coats,Shirt Jackets
+Apparel,Jackets and Coats,Shirt Jackets,Flannel shirt jackets
+Apparel,Jackets and Coats,Shirt Jackets,Military-inspired shirt jackets
+Apparel,Jackets and Coats,Shirt Jackets,Oversized shirt jackets
+Apparel,Jackets and Coats,Shirt Jackets,Sherpa-lined shirt jackets
+Apparel,Jackets and Coats,Shirt Jackets,Utility shirt jackets
+Apparel,Jackets and Coats,Shirt Jackets,Workwear-style shirt jackets
+Apparel,Jackets and Coats,Track Jackets
+Apparel,Jackets and Coats,Track Jackets,Athletic track jackets
+Apparel,Jackets and Coats,Track Jackets,Classic track jackets
+Apparel,Jackets and Coats,Track Jackets,Retro-style track jackets
+Apparel,Jackets and Coats,Trench Coats
+Apparel,Jackets and Coats,Trench Coats,Belted trench coats
+Apparel,Jackets and Coats,Trench Coats,Classic trench coats
+Apparel,Jackets and Coats,Trench Coats,Double-breasted trench coats
+Apparel,Jackets and Coats,Trench Coats,Oversized trench coats
+Apparel,Jackets and Coats,Trench Coats,Water-resistant trench coats
+Apparel,Jackets and Coats,Vests
+Apparel,Jackets and Coats,Vests,Denim Vests
+Apparel,Jackets and Coats,Vests,Fleece Vests
+Apparel,Jackets and Coats,Vests,Motorcycle vests
+Apparel,Jackets and Coats,Vests,Puffer Vests
+Apparel,Jackets and Coats,Windbreakers
+Apparel,Jackets and Coats,Windbreakers,Packable windbreakers
+Apparel,Jackets and Coats,Windbreakers,Pullover windbreakers
+Apparel,Jackets and Coats,Windbreakers,Quarter-zip windbreakers
+Apparel,Jackets and Coats,Windbreakers,Reflective windbreakers
+Apparel,Jackets and Coats,Windbreakers,Water-resistant windbreakers
+Apparel,One-pieces
+Apparel,One-pieces,Coveralls
+Apparel,One-pieces,Coveralls,Boiler suits
+Apparel,One-pieces,Coveralls,Disposable coveralls
+Apparel,One-pieces,Coveralls,Fire-resistant coveralls
+Apparel,One-pieces,Coveralls,Flight suit coveralls
+Apparel,One-pieces,Coveralls,Mechanics coveralls
+Apparel,One-pieces,Coveralls,Military coveralls
+Apparel,One-pieces,Coveralls,Painter coveralls
+Apparel,One-pieces,Coveralls,Protective coveralls
+Apparel,One-pieces,Coveralls,Work coveralls
+Apparel,One-pieces,Jumpsuits
+Apparel,One-pieces,Jumpsuits,Belted jumpsuits
+Apparel,One-pieces,Jumpsuits,Casual jumpsuits
+Apparel,One-pieces,Jumpsuits,Formal jumpsuits
+Apparel,One-pieces,Jumpsuits,Utility jumpsuits
+Apparel,One-pieces,Onesies
+Apparel,One-pieces,Onesies,Footed onesies
+Apparel,One-pieces,Onesies,Trap door onesies
+Apparel,One-pieces,Overalls
+Apparel,One-pieces,Overalls,Bib overalls
+Apparel,One-pieces,Overalls,Carpenter overalls
+Apparel,One-pieces,Overalls,Convertible overalls
+Apparel,One-pieces,Overalls,Dungarees
+Apparel,One-pieces,Overalls,Short overalls
+Apparel,One-pieces,Rompers
+Apparel,One-pieces,Rompers,Casual rompers
+Apparel,One-pieces,Rompers,Formal rompers
+Apparel,One-pieces,Rompers,Long rompers
+Apparel,One-pieces,Rompers,Playsuits
+Apparel,One-pieces,Rompers,Ruffled rompers
+Apparel,Pants
+Apparel,Pants,Capris
+Apparel,Pants,Capris,Athletic capris
+Apparel,Pants,Capris,Boho capris
+Apparel,Pants,Capris,Cargo capris
+Apparel,Pants,Capris,Classic capris
+Apparel,Pants,Capris,Cropped capris
+Apparel,Pants,Capris,Culotte-style capris
+Apparel,Pants,Capris,Flared capris
+Apparel,Pants,Capris,Ruffled capris
+Apparel,Pants,Capris,Skinny capris
+Apparel,Pants,Capris,Wide-leg capris
+Apparel,Pants,Casual Pants
+Apparel,Pants,Casual Pants,Cargo pants
+Apparel,Pants,Casual Pants,Chinos
+Apparel,Pants,Casual Pants,Cropped pants
+Apparel,Pants,Casual Pants,Gaucho pants
+Apparel,Pants,Casual Pants,Sweatpants
+Apparel,Pants,Casual Pants,Track pants
+Apparel,Pants,Casual Pants,Wide-leg pants
+Apparel,Pants,Casual Pants,Yoga pants
+Apparel,Pants,Casual Pants,Scrub pants
+Apparel,Pants,Dress Pants
+Apparel,Pants,Dress Pants,Cropped dress pants
+Apparel,Pants,Dress Pants,Straight-leg dress pants
+Apparel,Pants,Dress Pants,Tapered dress pants
+Apparel,Pants,Dress Pants,Wide-leg dress pants
+Apparel,Pants,Flares
+Apparel,Pants,Flares,Bell-bottom flares
+Apparel,Pants,Flares,Bootcut flares
+Apparel,Pants,Flares,Flared cargo pants
+Apparel,Pants,Flares,Flared gaucho pants
+Apparel,Pants,Flares,Flared sweatpants
+Apparel,Pants,Flares,Flared yoga pants
+Apparel,Pants,Flares,Retro flares
+Apparel,Pants,Flares,Wide-leg flares
+Apparel,Pants,Jeans
+Apparel,Pants,Jeans,Bootcut jeans
+Apparel,Pants,Jeans,Boyfriend jeans
+Apparel,Pants,Jeans,Capri jeans
+Apparel,Pants,Jeans,Cropped jeans
+Apparel,Pants,Jeans,Distressed jeans
+Apparel,Pants,Jeans,Flare jeans
+Apparel,Pants,Jeans,Skinny jeans
+Apparel,Pants,Jeans,Straight-leg jeans
+Apparel,Pants,Jeans,Wide-leg jeans
+Apparel,Pants,Joggers
+Apparel,Pants,Joggers,Athletic joggers
+Apparel,Pants,Joggers,Cargo joggers
+Apparel,Pants,Joggers,Classic joggers
+Apparel,Pants,Joggers,Harem joggers
+Apparel,Pants,Joggers,Lounge joggers
+Apparel,Pants,Joggers,Streetwear joggers
+Apparel,Pants,Joggers,Scrub joggers
+Apparel,Pants,Leggings
+Apparel,Pants,Leggings,Athletic leggings
+Apparel,Pants,Leggings,Capri leggings
+Apparel,Pants,Leggings,Compression leggings
+Apparel,Pants,Leggings,Flared leggings
+Apparel,Pants,Leggings,Jeggings
+Apparel,Pants,Leggings,Seamless leggings
+Apparel,Pants,Leggings,Tummy control leggings
+Apparel,Pants,Leggings,Wide-waistband leggings
+Apparel,Pants,Leggings,Yoga leggings
+Apparel,Pants,Palazzo Pants
+Apparel,Pants,Palazzo Pants,Bohemian-style palazzo pants
+Apparel,Pants,Palazzo Pants,Cropped palazzo pants
+Apparel,Pants,Palazzo Pants,Embroidered palazzo pants
+Apparel,Pants,Palazzo Pants,Flared palazzo pants
+Apparel,Pants,Palazzo Pants,Pleated palazzo pants
+Apparel,Pants,Palazzo Pants,Ruffled palazzo pants
+Apparel,Pants,Palazzo Pants,Sequin palazzo pants
+Apparel,Pants,Trousers
+Apparel,Pants,Trousers,Chinos
+Apparel,Pants,Trousers,Cropped trousers
+Apparel,Pants,Trousers,Flared trousers
+Apparel,Pants,Trousers,Paperbag waist trousers
+Apparel,Pants,Trousers,Pleated trousers
+Apparel,Pants,Trousers,Straight-leg trousers
+Apparel,Pants,Trousers,Tapered trousers
+Apparel,Pants,Trousers,Wide-leg trousers
+Apparel,Sets
+Apparel,Sets,Snowsuits
+Apparel,Sets,Sweatsuits
+Apparel,Shorts
+Apparel,Shorts,Athletic Shorts
+Apparel,Shorts,Athletic Shorts,Basketball shorts
+Apparel,Shorts,Athletic Shorts,Bicycle shorts
+Apparel,Shorts,Athletic Shorts,Gym shorts
+Apparel,Shorts,Athletic Shorts,Running shorts
+Apparel,Shorts,Athletic Shorts,Soccer shorts
+Apparel,Shorts,Athletic Shorts,Tennis shorts
+Apparel,Shorts,Bermuda Shorts
+Apparel,Shorts,Bermuda Shorts,Belted Bermuda shorts
+Apparel,Shorts,Bermuda Shorts,Cargo Bermuda shorts
+Apparel,Shorts,Bermuda Shorts,Chino Bermuda shorts
+Apparel,Shorts,Bermuda Shorts,Classic Bermuda shorts
+Apparel,Shorts,Bermuda Shorts,Cuffed Bermuda shorts
+Apparel,Shorts,Bermuda Shorts,Drawstring Bermuda shorts
+Apparel,Shorts,Bermuda Shorts,Embroidered Bermuda shorts
+Apparel,Shorts,Bermuda Shorts,Flared Bermuda shorts
+Apparel,Shorts,Bermuda Shorts,Fringed Bermuda shorts
+Apparel,Shorts,Bermuda Shorts,Pleated Bermuda shorts
+Apparel,Shorts,Bermuda Shorts,Tailored Bermuda shorts
+Apparel,Shorts,Casual Shorts
+Apparel,Shorts,Casual Shorts,Bloomers
+Apparel,Shorts,Casual Shorts,Board shorts
+Apparel,Shorts,Casual Shorts,Cargo shorts
+Apparel,Shorts,Casual Shorts,Chino shorts
+Apparel,Shorts,Casual Shorts,Culotte shorts
+Apparel,Shorts,Casual Shorts,Jogger shorts
+Apparel,Shorts,Casual Shorts,Lounge shorts
+Apparel,Shorts,Casual Shorts,Paperbag shorts
+Apparel,Shorts,Casual Shorts,Pleated shorts
+Apparel,Shorts,Casual Shorts,Sweat shorts
+Apparel,Shorts,Casual Shorts,Utility shorts
+Apparel,Shorts,Denim Shorts
+Apparel,Shorts,Denim Shorts,Acid wash denim shorts
+Apparel,Shorts,Denim Shorts,Boyfriend denim shorts
+Apparel,Shorts,Denim Shorts,Classic denim shorts
+Apparel,Shorts,Denim Shorts,Cutoff denim shorts
+Apparel,Shorts,Denim Shorts,Distressed denim shorts
+Apparel,Shorts,Denim Shorts,Embroidered denim shorts
+Apparel,Shorts,Denim Shorts,Flared denim shorts
+Apparel,Shorts,Denim Shorts,Mom denim shorts
+Apparel,Shorts,Denim Shorts,Paperbag waist denim shorts
+Apparel,Shorts,Denim Shorts,Retro denim shorts
+Apparel,Shorts,Denim Shorts,Ripped denim shorts
+Apparel,Shorts,Denim Shorts,Rolled cuff denim shorts
+Apparel,Shorts,Denim Shorts,Wide-leg denim shorts
+Apparel,Skirts
+Apparel,Skirts,Athletic Skirts
+Apparel,Skirts,Athletic Skirts,Badminton skirts
+Apparel,Skirts,Athletic Skirts,Cheerleading skirts
+Apparel,Skirts,Athletic Skirts,Field hockey skirts
+Apparel,Skirts,Athletic Skirts,Golf skirts
+Apparel,Skirts,Athletic Skirts,Lacrosse skirts
+Apparel,Skirts,Athletic Skirts,Running skirts
+Apparel,Skirts,Athletic Skirts,Tennis skirts
+Apparel,Skirts,Maxi Skirts
+Apparel,Skirts,Maxi Skirts,Bohemian maxi skirts
+Apparel,Skirts,Maxi Skirts,High-low maxi skirts
+Apparel,Skirts,Maxi Skirts,Mermaid maxi skirts
+Apparel,Skirts,Maxi Skirts,Pleated maxi skirts
+Apparel,Skirts,Maxi Skirts,Pleated midi skirts
+Apparel,Skirts,Maxi Skirts,Ruffled maxi skirts
+Apparel,Skirts,Maxi Skirts,Tiered maxi skirts
+Apparel,Skirts,Midi Skirts
+Apparel,Skirts,Midi Skirts,Athletic skorts
+Apparel,Skirts,Midi Skirts,Flounce midi skirts
+Apparel,Skirts,Midi Skirts,Godet midi skirts
+Apparel,Skirts,Midi Skirts,Golf skorts
+Apparel,Skirts,Midi Skirts,Paperbag waist midi skirts
+Apparel,Skirts,Midi Skirts,Ruffled midi skirts
+Apparel,Skirts,Midi Skirts,Scuba midi skirts
+Apparel,Skirts,Midi Skirts,Tiered midi skirts
+Apparel,Skirts,Mini Skirts
+Apparel,Skirts,Mini Skirts,Fringe mini skirts
+Apparel,Skirts,Mini Skirts,Paperbag waist mini skirts
+Apparel,Skirts,Mini Skirts,Pleated mini skirts
+Apparel,Skirts,Mini Skirts,Ruffled mini skirts
+Apparel,Skirts,Mini Skirts,Sequin mini skirts
+Apparel,Skirts,Mini Skirts,Skater mini skirts
+Apparel,Skirts,Mini Skirts,Tiered mini skirts
+Apparel,Skirts,Mini Skirts,Wrap mini skirts
+Apparel,Skirts,Mini Skirts,Sarongs
+Apparel,Skirts,Skorts
+Apparel,Skirts,Skorts,Embroidered skorts
+Apparel,Skirts,Skorts,Maxi skorts
+Apparel,Skirts,Skorts,Midi skorts
+Apparel,Skirts,Skorts,Mini skorts
+Apparel,Skirts,Skorts,Paperbag waist skorts
+Apparel,Skirts,Skorts,Pleated skorts
+Apparel,Skirts,Skorts,Ruffled skorts
+Apparel,Skirts,Skorts,Scuba skorts
+Apparel,Skirts,Skorts,Tennis skorts
+Apparel,Skirts,Skorts,Utility skorts
+Apparel,Sleepwear
+Apparel,Sleepwear,Nightgowns
+Apparel,Sleepwear,Nightgowns,Babydoll nightgowns
+Apparel,Sleepwear,Nightgowns,Chemises
+Apparel,Sleepwear,Nightgowns,Embroidered nightgowns
+Apparel,Sleepwear,Nightgowns,Peignoir nightgowns
+Apparel,Sleepwear,Nightgowns,Ruffled nightgowns
+Apparel,Sleepwear,Nightgowns,Slips
+Apparel,Sleepwear,Nightgowns,Tunic nightgowns
+Apparel,Sleepwear,Nightgowns,Victorian nightgowns
+Apparel,Sleepwear,Nightgowns,Vintage nightgowns
+Apparel,Sleepwear,Pajamas
+Apparel,Sleepwear,Pajamas,Lounge pants
+Apparel,Sleepwear,Pajamas,Lounge shorts
+Apparel,Sleepwear,Pajamas,Lounge tops
+Apparel,Sleepwear,Pajamas,Pajama onesies
+Apparel,Sleepwear,Pajamas,Pajama pants
+Apparel,Sleepwear,Pajamas,Pajama sets
+Apparel,Sleepwear,Pajamas,Pajama shorts
+Apparel,Sleepwear,Pajamas,Pajama tops
+Apparel,Sleepwear,Robes
+Apparel,Sleepwear,Robes,Belted robes
+Apparel,Sleepwear,Robes,Dressing gowns
+Apparel,Sleepwear,Robes,Kimono-style robes
+Apparel,Sleepwear,Robes,Negligees
+Apparel,Sleepwear,Robes,Spa robes
+Apparel,Sleepwear,Robes,Wrap-style robes
+Apparel,Sleepwear,Sleepshirts
+Apparel,Sleepwear,Sleepshirts,Button-down sleepshirts
+Apparel,Sleepwear,Sleepshirts,Graphic sleepshirts
+Apparel,Sleepwear,Sleepshirts,Oversized sleepshirts
+Apparel,Sleepwear,Sleepshirts,Printed sleepshirts
+Apparel,Sleepwear,Sleepshirts,T-shirt sleepshirts
+Apparel,Sweaters
+Apparel,Sweaters,Cardigans
+Apparel,Sweaters,Cardigans,Classic cardigans
+Apparel,Sweaters,Cardigans,Cropped cardigans
+Apparel,Sweaters,Cardigans,Embellished cardigans
+Apparel,Sweaters,Cardigans,Kimono cardigans
+Apparel,Sweaters,Cardigans,Open-front cardigans
+Apparel,Sweaters,Cardigans,Oversized cardigans
+Apparel,Sweaters,Cardigans,Waterfall cardigans
+Apparel,Sweaters,Cardigans,Wrap cardigans
+Apparel,Sweaters,Pullovers
+Apparel,Sweaters,Pullovers,Cable knit pullovers
+Apparel,Sweaters,Pullovers,Classic pullovers
+Apparel,Sweaters,Pullovers,Oversized pullovers
+Apparel,Sweaters,Shawls
+Apparel,Sweaters,Shrugs
+Apparel,Sweaters,Sweater Vests
+Apparel,Sweatshirts
+Apparel,Sweatshirts,Hoodies
+Apparel,Sweatshirts,Hoodies,Cropped hoodies
+Apparel,Sweatshirts,Hoodies,Oversized hoodies
+Apparel,Sweatshirts,Hoodies,Pullover hoodies
+Apparel,Sweatshirts,Hoodies,Zip-up hoodies
+Apparel,Sweatshirts,Pullover Sweatshirts
+Apparel,Sweatshirts,Zip-up Sweatshirts
+Apparel,Swimwear
+Apparel,Swimwear,Bikinis
+Apparel,Swimwear,Bikinis,Bikini tops
+Apparel,Swimwear,Bikinis,Bikini bottoms
+Apparel,Swimwear,Bikinis,Bandeau bikini tops
+Apparel,Swimwear,Bikinis,Bandeau tankini tops
+Apparel,Swimwear,Bikinis,Bikini briefs
+Apparel,Swimwear,Bikinis,Bikini sets
+Apparel,Swimwear,Bikinis,Blouson tankini tops
+Apparel,Swimwear,Bikinis,Bralette bikini tops
+Apparel,Swimwear,Bikinis,Brazilian bikini bottoms
+Apparel,Swimwear,Bikinis,Cheeky bikini bottoms
+Apparel,Swimwear,Bikinis,Crop bikini tops
+Apparel,Swimwear,Bikinis,Halter bikini tops
+Apparel,Swimwear,Bikinis,Halter tankini tops
+Apparel,Swimwear,Bikinis,High-waisted bikini bottoms
+Apparel,Swimwear,Bikinis,Hipster bikini bottoms
+Apparel,Swimwear,Bikinis,Racerback tankini tops
+Apparel,Swimwear,Bikinis,Thong bikini bottoms
+Apparel,Swimwear,Bikinis,Tie-side bikini bottoms
+Apparel,Swimwear,Bikinis,Triangle bikini tops
+Apparel,Swimwear,Bikinis,Underwire bikini tops
+Apparel,Swimwear,Bikinis,Underwire tankini tops
+Apparel,Swimwear,Bikinis,Scoop Bikini Tops
+Apparel,Swimwear,Bikinis,Bikini Tops
+Apparel,Swimwear,Bikinis,Bikini Bottoms
+Apparel,Swimwear,One-Piece Swimsuits
+Apparel,Swimwear,One-Piece Swimsuits,Athletic swimsuits
+Apparel,Swimwear,One-Piece Swimsuits,Burkinis
+Apparel,Swimwear,One-Piece Swimsuits,Classic swimsuits
+Apparel,Swimwear,One-Piece Swimsuits,Cut-out swimsuits
+Apparel,Swimwear,One-Piece Swimsuits,Halter swimsuits
+Apparel,Swimwear,One-Piece Swimsuits,Retro swimsuits
+Apparel,Swimwear,One-Piece Swimsuits,Ruffled swimsuits
+Apparel,Swimwear,One-Piece Swimsuits,Swim dresses
+Apparel,Swimwear,One-Piece Swimsuits,Wetsuits
+Apparel,Swimwear,Swim Shirts
+Apparel,Swimwear,Swim Shirts,Rashguards
+Apparel,Swimwear,Swim Trunks
+Apparel,Swimwear,Swim Trunks,Boardshorts
+Apparel,Swimwear,Swim Trunks,Jammer swim trunks
+Apparel,Swimwear,Swim Trunks,Swim briefs
+Apparel,Swimwear,Swim Trunks,Swim shorts
+Apparel,Swimwear,Beach Towels
+Apparel,Tops
+Apparel,Tops,Button-Down Shirts
+Apparel,Tops,Button-Down Shirts,Casual button-down shirts
+Apparel,Tops,Button-Down Shirts,Chambray button-down shirts
+Apparel,Tops,Button-Down Shirts,Classic button-down shirts
+Apparel,Tops,Button-Down Shirts,Embroidered button-down shirts
+Apparel,Tops,Button-Down Shirts,Formal button-down shirts
+Apparel,Tops,Button-Down Shirts,Hawaiian button-down shirts
+Apparel,Tops,Button-Down Shirts,Oversized button-down shirts
+Apparel,Tops,Button-Down Shirts,Oxford button-down shirts
+Apparel,Tops,Button-Down Shirts,Ruffled button-down shirts
+Apparel,Tops,Button-Down Shirts,Sheer button-down shirts
+Apparel,Tops,Button-Down Shirts,Tuxedo button-down shirts
+Apparel,Tops,Button-Down Shirts,Western button-down shirts
+Apparel,Tops,Button-Down Shirts,Wrap button-down shirts
+Apparel,Tops,Casual tops
+Apparel,Tops,Casual tops,Camisoles
+Apparel,Tops,Casual tops,Tank Tops
+Apparel,Tops,Casual tops,Crop tops
+Apparel,Tops,Casual tops,Halter tops
+Apparel,Tops,Casual tops,Print tops
+Apparel,Tops,Casual tops,Peplum tops
+Apparel,Tops,Casual tops,Turtlenecks
+Apparel,Tops,Casual tops,Polo shirts
+Apparel,Tops,Casual tops,Scrub tops
+Apparel,Tops,Casual tops,Underscrub tops
+Apparel,Tops,Fashion tops
+Apparel,Tops,Fashion tops,Blouses
+Apparel,Tops,Fashion tops,Bodysuits
+Apparel,Tops,Fashion tops,Bustiers
+Apparel,Tops,Fashion tops,Camisoles
+Apparel,Tops,Fashion tops,Cold-shoulder tops
+Apparel,Tops,Fashion tops,Crop tops
+Apparel,Tops,Fashion tops,Halter tops
+Apparel,Tops,Fashion tops,Off-the-shoulder tops
+Apparel,Tops,Fashion tops,Peplum tops
+Apparel,Tops,Fashion tops,Tank Tops
+Apparel,Tops,Fashion tops,Turtlenecks
+Apparel,Tops,T-Shirts
+Apparel,Tops,T-Shirts,Graphic t-shirts
+Apparel,Tops,T-Shirts,Logo t-shirts
+Apparel,Tops,T-Shirts,Patterned t-shirts
+Apparel,Tops,T-Shirts,Plain t-shirts
+Apparel,Tops,Vests
+Apparel,Tops,Vests,Fashion vests
+Apparel,Tops,Vests,Suit vests
+Apparel,Undergarments
+Apparel,Undergarments,Boxers
+Apparel,Undergarments,Bras
+Apparel,Undergarments,Bras,Bralettes
+Apparel,Undergarments,Bras,Push-up bras
+Apparel,Undergarments,Bras,Sports bras
+Apparel,Undergarments,Bras,Strapless bras
+Apparel,Undergarments,Bras,T-shirt bras
+Apparel,Undergarments,Bras,Wireless bras
+Apparel,Undergarments,Briefs
+Apparel,Undergarments,Lingerie
+Apparel,Undergarments,Lingerie,Babydolls
+Apparel,Undergarments,Lingerie,Bustiers
+Apparel,Undergarments,Lingerie,Chemises
+Apparel,Undergarments,Lingerie,Corsets
+Apparel,Undergarments,Lingerie,Garter belts
+Apparel,Undergarments,Lingerie,Slips
+Apparel,Undergarments,Lingerie,Teddies
+Apparel,Undergarments,Panties
+Apparel,Undergarments,Panties,Bikini panties
+Apparel,Undergarments,Panties,Boyshorts
+Apparel,Undergarments,Panties,Briefs
+Apparel,Undergarments,Panties,Hipster panties
+Apparel,Undergarments,Panties,Thongs
+Apparel,Undergarments,Pantyhose
+Apparel,Undergarments,Socks
+Apparel,Undergarments,Socks,Ankle socks
+Apparel,Undergarments,Socks,Athletic socks
+Apparel,Undergarments,Socks,Crew socks
+Apparel,Undergarments,Socks,Dress socks
+Apparel,Undergarments,Socks,Knee-high socks
+Apparel,Undergarments,Socks,No-show socks
+Apparel,Undergarments,Socks,Thigh-high socks
+Apparel,Undergarments,Tights
+Apparel,Undergarments,Tights,Control-top tights
+Apparel,Undergarments,Tights,Fishnet tights
+Apparel,Undergarments,Tights,Footless tights
+Apparel,Undergarments,Tights,Opaque tights
+Apparel,Undergarments,Tights,Patterned tights
+Apparel,Undergarments,Tights,Sheer tights
+Apparel,Undergarments,Undershirts
+Footwear
+Footwear,Boots
+Footwear,Boots,Ankle Boots
+Footwear,Boots,Booties
+Footwear,Boots,Combat Boots
+Footwear,Boots,Cowboy Boots
+Footwear,Boots,Hiking Boots
+Footwear,Boots,Knee-high Boots
+Footwear,Boots,Over-the-knee Boots
+Footwear,Boots,Rain Boots
+Footwear,Boots,Riding Boots
+Footwear,Boots,Snow Boots
+Footwear,Boots,Work Boots
+Footwear,Boots,Wetsuit Boots
+Footwear,Casual Shoes
+Footwear,Casual Shoes,Clogs
+Footwear,Casual Shoes,Moccasins
+Footwear,Casual Shoes,Mules
+Footwear,Casual Shoes,Slippers
+Footwear,Dress Shoes
+Footwear,Dress Shoes,Ballet Flats
+Footwear,Dress Shoes,Clogs
+Footwear,Dress Shoes,Loafers
+Footwear,Dress Shoes,Mules
+Footwear,Dress Shoes,Oxfords
+Footwear,Dress Shoes,Pumps
+Footwear,Dress Shoes,Platforms
+Footwear,Dress Shoes,Mary Janes
+Footwear,Sandals
+Footwear,Sandals,Espadrilles
+Footwear,Sandals,Flat Sandals
+Footwear,Sandals,Flip-Flops
+Footwear,Sandals,Heeled Sandals
+Footwear,Sandals,Slides
+Footwear,Sandals,Water Shoes
+Footwear,Sneakers
+Footwear,Sneakers,Athletic Sneakers
+Footwear,Sneakers,Fashion Sneakers
+Footwear,Sneakers,Fashion Sneakers,Chunky sneakers
+Footwear,Sneakers,Fashion Sneakers,High-top sneakers
+Footwear,Sneakers,Fashion Sneakers,Low-Top sneakers
+Footwear,Sneakers,Lifestyle Sneakers
+Footwear,Sneakers,Running Shoes
+Home
+Home,Sports Equipment
+Home,Sports Equipment,Skiing,Ski Poles
+Home,Sports Equipment,Surfing,Surfboards
+Home,Sports Equipment,Surfing,Surfboard Fins
+Home,Baby Gear,Strollers
+Home,Baby Gear,Strollers,Double strollers
+Home,Baby Gear,Strollers,Travel strollers
+Home,Baby Gear,Strollers,Wagon strollers
+Home,Baby Gear,Strollers,Single strollers
+Home,Baby Gear,Strollers,Stroller covers
+Home,Baby Gear,Strollers,Stroller acessories
+Home,Baby Gear,Car Seats
+Home,Baby Gear,Car Seats,Car seat covers
+Home,Baby Gear,Car Seats,Car seat accessories
+Home,Baby Gear,High chairs
+Home,Baby Gear,High chairs,Booster seats
+Home,Baby Gear,Baby Carriers
+Home,Baby Gear,Baby Carriers,Swaddle carriers
+Home,Baby Gear,Baby Carriers,Hip carriers
+Home,Baby Gear,Baby Carriers,Backpack carriers
+Home,Baby Gear
+Home,Bedding
+Home,Bedding,Blankets
+Home,Bedding,Comforters
+Home,Bedding,Duvet Sets
+Home,Bedding,Pillow Cases
+Home,Bedding,Pillows
+Home,Bedding,Quilts
+Home,Bedding,Shams
+Home,Care
+Home,Care,Shaving
+Home,Care,Shaving,Shaving Kits
+Home,Care,Shaving,Razors
+Home,Care,Toiletries,Moisturizers
+Home,Care,Toiletries,Body Lotions
+Home,Care,Toiletries,Shampoo
+Home,Care,Toiletries,Conditioners
+Home,Kitchen
+Home,Kitchen,Barware
+Home,Kitchen,Coasters
+Home,Kitchen,Cutlery
+Home,Kitchen,Glassware
+Home,Kitchen,Serveware
+Home,Kitchen,Table Linens
+Home,Living
+Home,Living,Art
+Home,Living,Candle Holders
+Home,Living,Candles
+Home,Living,Clocks
+Home,Living,Decorative Bowls
+Home,Living,Decorative Objects
+Home,Living,Decorative Pillows
+Home,Living,Diffusers
+Home,Living,Doormats
+Home,Living,Essential Oils
+Home,Living,Figurines
+Home,Living,Fountains
+Home,Living,Frames
+Home,Living,Lamps
+Home,Living,Mirrors
+Home,Living,Rugs
+Home,Living,Vases
+Home,Toys
+Home,Toys,Arts and Crafts
+Home,Toys,Baby Toys
+Home,Toys,Bath Toys
+Home,Toys,Building Sets
+Home,Toys,Dolls and Action Figures
+Home,Toys,Dress Up
+Home,Toys,Educational Toys
+Home,Toys,Games and Puzzles
+Home,Toys,Outdoor and Sports
+Home,Toys,Play Figures
+Home,Toys,Remote Control
+Home,Toys,Stuffed Toys
+Jewelry & Accessories
+Jewelry & Accessories,Jewelry
+Jewelry & Accessories,Jewelry,Jewelry Boxes
+Jewelry & Accessories,Accessories
+Jewelry & Accessories,Accessories,Belts
+Jewelry & Accessories,Accessories,Cufflinks
+Jewelry & Accessories,Accessories,Face Masks
+Jewelry & Accessories,Accessories,Glasses
+Jewelry & Accessories,Accessories,Glasses,Aviator glasses
+Jewelry & Accessories,Accessories,Glasses,Browline glasses
+Jewelry & Accessories,Accessories,Glasses,Cat-eye glasses
+Jewelry & Accessories,Accessories,Glasses,Geometric glasses
+Jewelry & Accessories,Accessories,Glasses,Oval glasses
+Jewelry & Accessories,Accessories,Glasses,Rectangle glasses
+Jewelry & Accessories,Accessories,Glasses,Round glasses
+Jewelry & Accessories,Accessories,Glasses,Square glasses
+Jewelry & Accessories,Accessories,Gloves
+Jewelry & Accessories,Accessories,Gloves,Driving gloves
+Jewelry & Accessories,Accessories,Gloves,Fashion gloves
+Jewelry & Accessories,Accessories,Gloves,Fingerless gloves
+Jewelry & Accessories,Accessories,Gloves,Formal gloves
+Jewelry & Accessories,Accessories,Gloves,Gardening gloves
+Jewelry & Accessories,Accessories,Gloves,Leather gloves
+Jewelry & Accessories,Accessories,Gloves,Motorcycle gloves
+Jewelry & Accessories,Accessories,Gloves,Ski gloves
+Jewelry & Accessories,Accessories,Gloves,Touchscreen gloves
+Jewelry & Accessories,Accessories,Gloves,Winter gloves
+Jewelry & Accessories,Accessories,Gloves,Work gloves
+Jewelry & Accessories,Accessories,Hair Accessories
+Jewelry & Accessories,Accessories,Hair Accessories,Bobby pins
+Jewelry & Accessories,Accessories,Hair Accessories,Hair bands
+Jewelry & Accessories,Accessories,Hair Accessories,Hair bows
+Jewelry & Accessories,Accessories,Hair Accessories,Hair claws
+Jewelry & Accessories,Accessories,Hair Accessories,Hair clips
+Jewelry & Accessories,Accessories,Hair Accessories,Hair combs
+Jewelry & Accessories,Accessories,Hair Accessories,Hair elastics
+Jewelry & Accessories,Accessories,Hair Accessories,Hair pins
+Jewelry & Accessories,Accessories,Hair Accessories,Headbands
+Jewelry & Accessories,Accessories,Hair Accessories,Scrunchies
+Jewelry & Accessories,Accessories,Handkerchiefs
+Jewelry & Accessories,Accessories,Hats
+Jewelry & Accessories,Accessories,Hats,Baseball caps
+Jewelry & Accessories,Accessories,Hats,Beanies
+Jewelry & Accessories,Accessories,Hats,Berets
+Jewelry & Accessories,Accessories,Hats,Boater hats
+Jewelry & Accessories,Accessories,Hats,Bowler hats
+Jewelry & Accessories,Accessories,Hats,Bucket hats
+Jewelry & Accessories,Accessories,Hats,Cowboy hats
+Jewelry & Accessories,Accessories,Hats,Fedoras
+Jewelry & Accessories,Accessories,Hats,Flat caps
+Jewelry & Accessories,Accessories,Hats,Newsboy caps
+Jewelry & Accessories,Accessories,Hats,Panama hats
+Jewelry & Accessories,Accessories,Hats,Sun hats
+Jewelry & Accessories,Accessories,Hats,Top hats
+Jewelry & Accessories,Accessories,Hats,Visors
+Jewelry & Accessories,Accessories,Key Chains
+Jewelry & Accessories,Accessories,Money Clips
+Jewelry & Accessories,Accessories,Mittens
+Jewelry & Accessories,Accessories,Scarves
+Jewelry & Accessories,Accessories,Scarves,Foulards
+Jewelry & Accessories,Accessories,Scarves,Gaiters
+Jewelry & Accessories,Accessories,Sunglasses
+Jewelry & Accessories,Accessories,Sunglasses,Aviator sunglasses
+Jewelry & Accessories,Accessories,Sunglasses,Butterfly sunglasses
+Jewelry & Accessories,Accessories,Sunglasses,Cat-eye sunglasses
+Jewelry & Accessories,Accessories,Sunglasses,Optical sunglasses
+Jewelry & Accessories,Accessories,Sunglasses,Oval sunglasses
+Jewelry & Accessories,Accessories,Sunglasses,Rectangular sunglasses
+Jewelry & Accessories,Accessories,Sunglasses,Round sunglasses
+Jewelry & Accessories,Accessories,Sunglasses,Ski sunglasses
+Jewelry & Accessories,Accessories,Sunglasses,Square sunglasses
+Jewelry & Accessories,Accessories,Sunglasses,Wayfarer sunglasses
+Jewelry & Accessories,Accessories,Sunglasses,Wraparound sunglasses
+Jewelry & Accessories,Accessories,Suspenders
+Jewelry & Accessories,Accessories,Ties
+Jewelry & Accessories,Accessories,Charms
+Jewelry & Accessories,Accessories,Phone Cases
+Jewelry & Accessories,Accessories,Umbrellas
+Jewelry & Accessories,Bags
+Jewelry & Accessories,Bags,Backpacks
+Jewelry & Accessories,Bags,Beach Bags
+Jewelry & Accessories,Bags,Belt Bags
+Jewelry & Accessories,Bags,Briefcases
+Jewelry & Accessories,Bags,Bucket Bags
+Jewelry & Accessories,Bags,Card Holders
+Jewelry & Accessories,Bags,Clutches
+Jewelry & Accessories,Bags,Crossbody Bags
+Jewelry & Accessories,Bags,Diaper Bags
+Jewelry & Accessories,Bags,Duffel Bags
+Jewelry & Accessories,Bags,Fanny Packs
+Jewelry & Accessories,Bags,Messenger Bags
+Jewelry & Accessories,Bags,Mini Bags
+Jewelry & Accessories,Bags,Reusable Shopping Bags
+Jewelry & Accessories,Bags,Saddle Bags
+Jewelry & Accessories,Bags,Satchels
+Jewelry & Accessories,Bags,Shoulder Bags
+Jewelry & Accessories,Bags,Top Handles
+Jewelry & Accessories,Bags,Totes
+Jewelry & Accessories,Bags,Wallets
+Jewelry & Accessories,Bags,Wallets,Long Wallets
+Jewelry & Accessories,Bags,Wallets,Wristlets
+Jewelry & Accessories,Bags,Wallets,Bifold Wallets
+Jewelry & Accessories,Bags,Wallets,Trifold Wallets
+Jewelry & Accessories,Bags,Wallets,Coin Purses
+Jewelry & Accessories,Bags,Suitcases
+Jewelry & Accessories,Jewelry
+Jewelry & Accessories,Jewelry,Anklets
+Jewelry & Accessories,Jewelry,Bracelets
+Jewelry & Accessories,Jewelry,Bracelets,Bangle bracelets
+Jewelry & Accessories,Jewelry,Bracelets,Beaded bracelets
+Jewelry & Accessories,Jewelry,Bracelets,Chain bracelets
+Jewelry & Accessories,Jewelry,Bracelets,Charm bracelets
+Jewelry & Accessories,Jewelry,Bracelets,Cuff bracelets
+Jewelry & Accessories,Jewelry,Bracelets,Tennis bracelets
+Jewelry & Accessories,Jewelry,Brooches
+Jewelry & Accessories,Jewelry,Earrings
+Jewelry & Accessories,Jewelry,Earrings,Chandelier earrings
+Jewelry & Accessories,Jewelry,Earrings,Cuff earrings
+Jewelry & Accessories,Jewelry,Earrings,Dangle earrings
+Jewelry & Accessories,Jewelry,Earrings,Drop earrings
+Jewelry & Accessories,Jewelry,Earrings,Hoop earrings
+Jewelry & Accessories,Jewelry,Earrings,Single earrings
+Jewelry & Accessories,Jewelry,Earrings,Stud earrings
+Jewelry & Accessories,Jewelry,Fine Jewelry
+Jewelry & Accessories,Jewelry,Fine Jewelry,Fine bracelets
+Jewelry & Accessories,Jewelry,Fine Jewelry,Fine earrings
+Jewelry & Accessories,Jewelry,Fine Jewelry,Fine necklaces
+Jewelry & Accessories,Jewelry,Fine Jewelry,Fine rings
+Jewelry & Accessories,Jewelry,Fine Jewelry,Fine watches
+Jewelry & Accessories,Jewelry,Necklaces
+Jewelry & Accessories,Jewelry,Necklaces,Chain necklaces
+Jewelry & Accessories,Jewelry,Necklaces,Choker necklaces
+Jewelry & Accessories,Jewelry,Necklaces,Collar necklaces
+Jewelry & Accessories,Jewelry,Necklaces,Lariat necklaces
+Jewelry & Accessories,Jewelry,Necklaces,Pendant necklaces
+Jewelry & Accessories,Jewelry,Necklaces,Statement necklaces
+Jewelry & Accessories,Jewelry,Piercings
+Jewelry & Accessories,Jewelry,Rings
+Jewelry & Accessories,Jewelry,Rings,Cocktail rings
+Jewelry & Accessories,Jewelry,Rings,Halo rings
+Jewelry & Accessories,Jewelry,Rings,Signet rings
+Jewelry & Accessories,Jewelry,Rings,Solitaire rings
+Jewelry & Accessories,Jewelry,Rings,Stackable rings
+Jewelry & Accessories,Jewelry,Rings,Statement rings
+Jewelry & Accessories,Jewelry,Watches
+Jewelry & Accessories,Jewelry,Watches,Analog watches
+Jewelry & Accessories,Jewelry,Watches,Chronograph watches
+Jewelry & Accessories,Jewelry,Watches,Digital watches
+Jewelry & Accessories,Jewelry,Watches,Dive watches
+Jewelry & Accessories,Jewelry,Watches,Dress watches
+Jewelry & Accessories,Jewelry,Watches,Pocket watches
+Jewelry & Accessories,Jewelry,Watches,Smartwatches
+Jewelry & Accessories,Jewelry,Watches,Sports watchss
+Jewelry & Accessories,Jewelry,Watches,Watch straps
+Jewelry & Accessories,Fragrances
+Jewelry & Accessories,Fragrances,Perfumes
+Jewelry & Accessories,Fragrances,Colognes
+Office
+Office,Equipment
+Office,Equipment,Calculators
+Office,Equipment,Paper Punches
+Office,Equipment,Paper Shredders
+Office,Equipment,Rulers & Protractors
+Office,Equipment,Scissors
+Office,Equipment,Sharpeners
+Office,Equipment,Binders
+Office,Equipment,Desk Organizers
+Office,Equipment,Lap Desks
+Office,Equipment,Pencil Cases
+Office,Supplies
+Office,Supplies,Pens
+Office,Supplies,Pencils
+Office,Supplies,Stationery
+Office,Supplies,Bookmarks
+Office,Supplies,Markers & Highlighters
+Office,Supplies,Crayons
+Office,Supplies,Staplers & Staples
+Office,Supplies,Folders & Filing
+Office,Supplies,Envelopes
+Office,Supplies,Notebooks & Pads
+Office,Supplies,Journals
+Office,Supplies,Calendars
+Office,Supplies,Magnets
+
+I will now send product descriptions and you will return one of the nodes in the taxonomy.
+The best is to categorize the product down to the subtype level, but when it is not possible, please return upper levels.
+For each level, please return a confidence score - between 0 to 100 percent.
+Please do not return any other output.
+Please always be accurate and return a specific node from this specific taxonomy.
+Here is an example for an output
+
+Jewelry & Accessories (100%) ==> Accessories,Gloves (90%) ==> Touchscreen gloves (60%)
+
