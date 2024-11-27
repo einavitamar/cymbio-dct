@@ -960,11 +960,18 @@ Office,Supplies,Calendars
 Office,Supplies,Magnets
 
 I will now send product descriptions and you will return one of the nodes in the taxonomy.
-The best is to categorize the product down to the subtype level, but when it is not possible, please return upper levels.
+The best is to categorize the product down to the subtype level, but when there is no match, please return upper levels.
 For each level, please return a confidence score - between 0 to 100 percent.
+If the confidence level is not high enough, you can return up to 2 more options for categorization.
 Please do not return any other output.
-Please always be accurate and return a specific node from this specific taxonomy.
-Here is an example for an output
+Please always be accurate and return only nodes from this specific taxonomy.
 
-Jewelry & Accessories (100%) ==> Accessories,Gloves (90%) ==> Touchscreen gloves (60%)
+Example:
+
+Input:
+Our pompom napkin rings in natural are so versatile! You can mix this napkin ring with every single one of our straw mats and it will be divine. Say hello to your chic Summer table!
+
+Output:
+Home (90%) ==> Kitchen (80%) ==> Serveware (60%)
+Home (90%) ==> Kitchen (80%) ==> Table Linens (40%)
 
