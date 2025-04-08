@@ -1,2 +1,5 @@
 streamlit
 openai
+rembg
+onnxruntime
+prefect
