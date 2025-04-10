@@ -1,22 +1,29 @@
+import json
+
 from PIL import Image, ImageOps
 import rembg
 import claid
+import copy
 import io, os
+from io import BytesIO
 from pathlib import Path
 from tqdm import tqdm
 #from prefect import flow, task
 #from prefect.futures import wait
 #from prefect.task_runners import ThreadPoolTaskRunner
+import logging
 
-#@task
-def load_images(input_folder: str) -> list:
-    """
-    Load all image paths from the input folder.
-    """
-    image_paths = [p for p in Path(input_folder).rglob("*")
-                   if p.suffix.lower() in {".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff"}]
-    return image_paths
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("processing_errors.log"),
+        logging.StreamHandler()
+    ]
+)
 
+IMAGE_EXTENSIONS = ('.jpg', '.jpeg', '.png','.gif','.bmp','.tiff')
 #@task
 def create_output_folder(output_folder: str) -> None:
     """
@@ -27,21 +34,6 @@ def create_output_folder(output_folder: str) -> None:
 
 
 # Define Prefect flow
-
-#@flow
-def image_processing_pipeline(input_folder: str, output_folder: str, config: dict) -> None:
-    """
-    Flow to process all images in the input folder and save them to the output folder.
-    """
-    # Step 1: Prepare the output folder
-    create_output_folder(output_folder)
-
-    # Step 2: Load all images from the input folder
-    image_paths = load_images(input_folder)
-    results = []
-    # Step 3: Process each image
-    for image_path in tqdm(image_paths):
-        transform_product_image(image_path, output_folder, config)
 
 def resize_old(img : Image,config:dict)->Image:
     # Get original dimensions
@@ -74,28 +66,68 @@ def resize_old(img : Image,config:dict)->Image:
     canvas.paste(img, (x_offset, y_offset), mask=img)
     return canvas
 
+
+from PIL import Image
+
+
+def override_config_on_zoomed_in_images(img : Image, bbox : tuple,current_config: dict)->dict:
+    config = copy.deepcopy(current_config)
+    left, top, right, bottom = bbox
+    img_w, img_h = img.size
+
+    if top == 0 and bottom==img_h and left == 0 and right == img_w:
+        config["resize"]["fit"] = 'fill'
+    if top == 0:
+        config['margins']['top'] = 0
+        config['gravity'] = 'top'
+    if bottom == img_h:
+        config['margins']['bottom'] = 0
+        config['gravity'] = 'bottom'
+    if left == 0:
+        config['margins']['left'] = 0
+        config['gravity'] = 'left'
+    if right == img_w:
+        config['margins']['right'] = 0
+        config['gravity'] = 'right'
+    return config
+
+
 def position(img: Image, config:dict):
+
+    if not config.get("resize"):
+        config["resize"] = {}
+    if not config['resize'].get('fit'):
+        config['resize']['fit'] = 'contain'
+    bbox = img.getbbox()
+    config = override_config_on_zoomed_in_images(img,bbox,config) #override config['margins'] and config['resize']['fit']
     # Compute space available
-    target_w, target_h = config['resize']
     margins = config.get('margins',{})
     margin_top = margins.get('top', 0)
     margin_bottom = margins.get('bottom', 0)
     margin_left = margins.get('left', 0)
     margin_right = margins.get('right', 0)
 
-    gravity = config.get('gravity','center')
-
+    target_w = config['resize'].get('width',img.size[0])
+    target_h = config['resize'].get('height',img.size[1])
     available_w = target_w - margin_left - margin_right
     available_h = target_h - margin_top - margin_bottom
 
-    # Resize to fit within available space (maintain aspect ratio)
-    img = ImageOps.contain(img,(available_w, available_h))
+    # crop / Resize
+    fit = config['resize']['fit']
+    img = img.crop(bbox)  # remove transparent edges
+    if fit== 'cover':
+        img = ImageOps.cover(img, (available_w, available_h))
+    elif fit=='stretch'or fit=='fill':
+        img = img.resize((available_w, available_h))
+    else: #contain
+        img = ImageOps.contain(img,(available_w, available_h))
 
     # Create new image with transparent background
-    canvas = Image.new("RGBA", (target_w, target_h), config['background_color'])
+    canvas = Image.new("RGBA", (target_w, target_h), tuple(config['background_color']))
 
     # Compute paste position based on gravity
     pw, ph = img.size
+    gravity = config.get('gravity','center')
     if gravity == 'top':
         x = margin_left + (available_w - pw) // 2
         y = margin_top
@@ -117,7 +149,8 @@ def position(img: Image, config:dict):
     return canvas
 
 sam_session = None
-def remove_bg(f,config):
+def remove_bg(f:bytes,config:dict)->bytes:
+    # background models: claid,isnet-general-use,birefnet-general,bria-rmbg,u2net
     background_model = config.get('background_model','u2net')
     if background_model=='claid':
         return claid.remove_background(f)
@@ -127,46 +160,77 @@ def remove_bg(f,config):
             sam_session = rembg.new_session(model_name=background_model)
         return rembg.remove(f,session = sam_session)
 
-def transform_product_image(image_path : Path, output_folder:str, config:dict)->None:
-    output_path = Path(output_folder) / image_path.name
-    if output_path.exists():
-        print(f"File already exists: {output_path}. Skipping task.")
-        return
 
-    # Open the image
-    with open(image_path,"rb") as f:
-        img = Image.open(remove_bg(f.read(),config))
-        # Ensure image has an alpha channel (RGBA)
-        if img.mode != "RGBA":
-            img = img.convert("RGBA")
-        img = img.crop(img.getbbox())  # remove transparent edges
+def process_product_image(image_path : str, output_path:str, config:dict)->bool:
+        if Path(output_path).exists():
+            print(f"File already exists: {output_path}. Skipping task.")
+            return False
 
-        img = position(img, config)
+        # Open the image
+        with open(image_path,"rb") as f:
+            img = Image.open(BytesIO(remove_bg(f.read(),config)))
+            # Ensure image has an alpha channel (RGBA)
+            if img.mode != "RGBA":
+                img = img.convert("RGBA")
+            if config.get("resize") or config.get("margins") or config.get("gravity"):
+                img = position(img, config)
 
-        # Save the final image
-        img = img.convert("RGB")
-        img.save(output_path, format="JPEG")
+            # Save the final image
+            img = img.convert("RGB")
+            img.save(output_path, format="JPEG")
+            return True
 
+
+def merge_configs(parent_config, override_config):
+    """Merge two configs with the override_config taking priority."""
+    merged = copy.deepcopy(parent_config)
+
+    for key, value in override_config.items():
+        if isinstance(value, dict) and key in merged:
+            merged[key].update(value)
+        else:
+            merged[key] = value
+    return merged
+
+def load_config(path):
+    config_path = os.path.join(path, 'config.json')
+    if os.path.exists(config_path):
+        with open(config_path, 'r') as f:
+            return json.load(f)
+    return {}
+
+
+def process_folder(input_folder :str, output_folder :str, parent_config:dict = None) -> int:
+    local_config = load_config(input_folder)
+    config = merge_configs(parent_config or {}, local_config)
+
+    os.makedirs(output_folder, exist_ok=True)
+    max_images = config.get("max_images",9e14)
+    n_processed = 0
+
+    for entry in tqdm(os.listdir(input_folder)):
+        if entry == 'config.json':
+            continue
+        input_path = os.path.join(input_folder, entry)
+        output_path = os.path.join(output_folder, entry)
+
+        if os.path.isdir(input_path):
+            n_processed+=process_folder(input_path, output_path, config)
+        elif entry.lower().endswith(IMAGE_EXTENSIONS):
+            try:
+                if process_product_image(input_path, output_path, config):
+                    n_processed+=1
+            except Exception as e:
+                logging.error(f"Failed to process {input_path}: {e}", exc_info=True)
+        if n_processed >= max_images:
+            break
+    return n_processed
 
 # Example execution
+
+#If the bb is on one of the borders: (1) change all margins to zero (2)change fit model to "strech"
 if __name__ == "__main__":
-    #input_folder = "/Users/einavitamar/Downloads/165"
-    base_input_folder="/Users/einavitamar/Downloads/Prada Images - Need to update Margin"
-    subfolder_configs = [("Small Handbags", 250), ("Handbags", 150), ("Backpacks",50), ("Wallets", 100)]
-    #input_folder="input_images"
-    # claid,isnet-general-use,birefnet-general,bria-rmbg,u2net
-    background_model="claid"
-    for (subfolder, side_margin) in subfolder_configs:
-        input_folder = str(base_input_folder / Path(subfolder))
-        #output_folder = str(Path(input_folder) / ("transformed_" + background_model))
-        output_folder = input_folder + "_transformed_" + background_model
-        config = {
-            "background_color": (255,255,255,0),
-            "resize": (1200, 1500),
-            "gravity":"bottom",
-            "margins":{"bottom":150,"left":side_margin,"right":side_margin},
-            "background_model":background_model
-        }
-        if subfolder == "Wallets":
-            config["margins"]["top"] = 350
-        image_processing_pipeline(input_folder, output_folder, config)
+    input_folder = "/Users/einavitamar/Downloads/Archive 5"
+    #input_folder = "/Users/einavitamar/Downloads/Fabletics 4.2"
+    #input_folder="images/Prada"
+    process_folder(input_folder,input_folder + "_processed")
