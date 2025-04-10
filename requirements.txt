@@ -3,3 +3,5 @@ openai
 rembg
 onnxruntime
 prefect
+pillow
+tqdm

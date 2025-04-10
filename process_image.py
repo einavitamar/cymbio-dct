@@ -4,13 +4,10 @@ from PIL import Image, ImageOps
 import rembg
 import claid
 import copy
-import io, os
+import os
 from io import BytesIO
 from pathlib import Path
 from tqdm import tqdm
-#from prefect import flow, task
-#from prefect.futures import wait
-#from prefect.task_runners import ThreadPoolTaskRunner
 import logging
 
 # Setup logging
@@ -56,7 +53,6 @@ def resize_old(img : Image,config:dict)->Image:
 
     # Resize image with padding to maintain aspect ratio
     img = ImageOps.contain(img, (product_max_width, product_max_height))
-    ImageOps.fit()
     # Create a blank white canvas with the required dimensions
     canvas = Image.new("RGB", (new_width, new_height),config['background_color'])
 
@@ -75,20 +71,20 @@ def override_config_on_zoomed_in_images(img : Image, bbox : tuple,current_config
     left, top, right, bottom = bbox
     img_w, img_h = img.size
 
-    if top == 0 and bottom==img_h and left == 0 and right == img_w:
+    if (top == 0 and bottom == img_h) or (left == 0 and right == img_w):
         config["resize"]["fit"] = 'fill'
     if top == 0:
         config['margins']['top'] = 0
-        config['gravity'] = 'top'
+        config['valign'] = 'top'
     if bottom == img_h:
         config['margins']['bottom'] = 0
-        config['gravity'] = 'bottom'
+        config['valign'] = 'bottom'
     if left == 0:
         config['margins']['left'] = 0
-        config['gravity'] = 'left'
+        config['xalign'] = 'left'
     if right == img_w:
         config['margins']['right'] = 0
-        config['gravity'] = 'right'
+        config['xalign'] = 'right'
     return config
 
 
@@ -127,21 +123,20 @@ def position(img: Image, config:dict):
 
     # Compute paste position based on gravity
     pw, ph = img.size
-    gravity = config.get('gravity','center')
-    if gravity == 'top':
-        x = margin_left + (available_w - pw) // 2
-        y = margin_top
-    elif gravity == 'bottom':
-        x = margin_left + (available_w - pw) // 2
-        y = target_h - margin_bottom - ph
-    elif gravity == 'left':
+    xalign = config.get('xalign','center')
+    if xalign == 'left':
         x = margin_left
-        y = margin_top + (available_h - ph) // 2
-    elif gravity == 'right':
+    elif xalign == 'right':
         x = target_w - margin_right - pw
-        y = margin_top + (available_h - ph) // 2
     else:  # center
         x = margin_left + (available_w - pw) // 2
+
+    valign = config.get('valign','center')
+    if valign == 'top':
+        y = margin_top
+    elif valign == 'bottom':
+        y = target_h - margin_bottom - ph
+    else:  # center
         y = margin_top + (available_h - ph) // 2
 
     # Paste product onto canvas
@@ -172,7 +167,7 @@ def process_product_image(image_path : str, output_path:str, config:dict)->bool:
             # Ensure image has an alpha channel (RGBA)
             if img.mode != "RGBA":
                 img = img.convert("RGBA")
-            if config.get("resize") or config.get("margins") or config.get("gravity"):
+            if config.get("resize") or config.get("margins") or config.get("valign") or config.get("xalign"):
                 img = position(img, config)
 
             # Save the final image
@@ -230,7 +225,7 @@ def process_folder(input_folder :str, output_folder :str, parent_config:dict = N
 
 #If the bb is on one of the borders: (1) change all margins to zero (2)change fit model to "strech"
 if __name__ == "__main__":
+    #input_folder="images/Prada"
     input_folder = "/Users/einavitamar/Downloads/Archive 5"
     #input_folder = "/Users/einavitamar/Downloads/Fabletics 4.2"
-    #input_folder="images/Prada"
     process_folder(input_folder,input_folder + "_processed")
