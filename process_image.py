@@ -73,6 +73,7 @@ def override_config_on_zoomed_in_images(img : Image, bbox : tuple,current_config
 
     if (top == 0 and bottom == img_h) or (left == 0 and right == img_w):
         config["resize"]["fit"] = 'fill'
+
     if top == 0:
         config['margins']['top'] = 0
         config['valign'] = 'top'
@@ -94,6 +95,8 @@ def position(img: Image, config:dict):
         config["resize"] = {}
     if not config['resize'].get('fit'):
         config['resize']['fit'] = 'contain'
+    if not config.get("margins"):
+        config["margins"] = {}
     bbox = img.getbbox()
     config = override_config_on_zoomed_in_images(img,bbox,config) #override config['margins'] and config['resize']['fit']
     # Compute space available
@@ -113,7 +116,7 @@ def position(img: Image, config:dict):
     img = img.crop(bbox)  # remove transparent edges
     if fit== 'cover':
         img = ImageOps.cover(img, (available_w, available_h))
-    elif fit=='stretch'or fit=='fill':
+    elif fit=='stretch' or fit=='fill':
         img = img.resize((available_w, available_h))
     else: #contain
         img = ImageOps.contain(img,(available_w, available_h))
@@ -171,6 +174,7 @@ def process_product_image(image_path : str, output_path:str, config:dict)->bool:
                 img = position(img, config)
                 img = img.convert("RGB")
             else:
+                img = img.crop(img.getbbox())  # remove transparent edges
                 canvas = Image.new('RGB', img.size, tuple(config['background_color']))
                 canvas.paste(img, mask=img.split()[3])  # 3 is the alpha channel
                 img = canvas

@@ -67,7 +67,7 @@ def remove_background(file:bytes) -> bytes:
     }
     #session = get_retry_session(retries=5, backoff_factor=1)
 
-    response = requests.post(url, headers=headers, files=files,timeout=(3, 30))
+    response = requests.post(url, headers=headers, files=files,timeout=30)
     response.raise_for_status()
 
     response_json = response.json()
