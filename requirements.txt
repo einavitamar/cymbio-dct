@@ -5,3 +5,5 @@ onnxruntime
 prefect
 pillow
 tqdm
+requests
+urllib3

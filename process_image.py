@@ -63,7 +63,7 @@ def resize_old(img : Image,config:dict)->Image:
     return canvas
 
 
-from PIL import Image
+#from PIL import Image
 
 
 def override_config_on_zoomed_in_images(img : Image, bbox : tuple,current_config: dict)->dict:
@@ -118,8 +118,6 @@ def position(img: Image, config:dict):
     else: #contain
         img = ImageOps.contain(img,(available_w, available_h))
 
-    # Create new image with transparent background
-    canvas = Image.new("RGBA", (target_w, target_h), tuple(config['background_color']))
 
     # Compute paste position based on gravity
     pw, ph = img.size
@@ -139,6 +137,8 @@ def position(img: Image, config:dict):
     else:  # center
         y = margin_top + (available_h - ph) // 2
 
+    # Create new image with background set to the requested color
+    canvas = Image.new("RGBA", (target_w, target_h), tuple(config['background_color']))
     # Paste product onto canvas
     canvas.paste(img, (x, y), img)
     return canvas
@@ -169,9 +169,12 @@ def process_product_image(image_path : str, output_path:str, config:dict)->bool:
                 img = img.convert("RGBA")
             if config.get("resize") or config.get("margins") or config.get("valign") or config.get("xalign"):
                 img = position(img, config)
-
+                img = img.convert("RGB")
+            else:
+                canvas = Image.new('RGB', img.size, tuple(config['background_color']))
+                canvas.paste(img, mask=img.split()[3])  # 3 is the alpha channel
+                img = canvas
             # Save the final image
-            img = img.convert("RGB")
             img.save(output_path, format="JPEG")
             return True
 
@@ -226,6 +229,6 @@ def process_folder(input_folder :str, output_folder :str, parent_config:dict = N
 #If the bb is on one of the borders: (1) change all margins to zero (2)change fit model to "strech"
 if __name__ == "__main__":
     #input_folder="images/Prada"
-    input_folder = "/Users/einavitamar/Downloads/Archive 5"
-    #input_folder = "/Users/einavitamar/Downloads/Fabletics 4.2"
+    #input_folder = "/Users/einavitamar/Downloads/Archive 5"
+    input_folder = "/Users/einavitamar/Downloads/Fabletics 4.2"
     process_folder(input_folder,input_folder + "_processed")

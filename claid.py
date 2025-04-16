@@ -1,13 +1,10 @@
-import requests
-from PIL import Image
 import hashlib
 import requests
-#import requests_cache
-from requests import Request
-from io import BytesIO
 import os
 import pickle
 from functools import wraps
+from dotenv import load_dotenv
+load_dotenv()
 
 def hash_file(f):
     hasher = hashlib.sha256()
@@ -59,23 +56,24 @@ claid_config='''
 
 
 @disk_cache(key_fn=hash_file)
-def remove_background(file:bytes)->bytes:
+def remove_background(file:bytes) -> bytes:
     url = "https://api.claid.ai/v1-beta1/image/edit/upload"
     headers = {
-        "Authorization": "Bearer 79604bac855e4d01adbb3a974d13df8d"
+        "Authorization": "Bearer " + os.getenv('CLAID_API_KEY')
     }
     files = {
         "file": ("no_file_name", file),
         "data": (None, claid_config, "application/json")
     }
+    #session = get_retry_session(retries=5, backoff_factor=1)
 
-    response = requests.post(url, headers=headers, files=files)
+    response = requests.post(url, headers=headers, files=files,timeout=(3, 30))
     response.raise_for_status()
 
     response_json = response.json()
     tmp_url = response_json['data']['output']['tmp_url']
 
     # Download the image from tmp_url
-    img_response = requests.get(tmp_url)
+    img_response = requests.get(tmp_url,timeout=(3, 30))
     img_response.raise_for_status()
     return img_response.content
